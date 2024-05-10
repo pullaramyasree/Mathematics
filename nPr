@@ -1,0 +1,24 @@
+class Solution{
+public:
+    long long int factorial(int n)
+    {
+        if(n==1 || n==0)
+            return 1;
+        long long int res=1;
+        while(n>0)
+        {
+            res*=n;
+            n--;
+        }
+        return res;
+    }
+    long long nPr(int n, int r)
+    {
+        long long int dr=1,nr=1,res=1;
+        nr=factorial(n);
+        dr=factorial(n-r);
+        res=nr/dr;
+        return res;
+        // code here
+    }
+};
