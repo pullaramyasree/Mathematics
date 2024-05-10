@@ -1,0 +1,29 @@
+class Solution {
+  public:
+    long long int rev(long long int n)
+	{
+		long long int res=0;
+		while(n>0)
+		{
+		    res=res*10+(n%10);
+		    n/=10;
+	    }
+		return res;
+    }
+
+    long long isSumPalindrome(long long n)
+    {
+        // code here
+        int c=0;
+        while(n!=rev(n))
+        {
+            if(c>=5)
+                return -1;
+            n+=rev(n);
+            c++;
+        }
+        if(n==rev(n))
+            return n;
+        
+    }
+};
