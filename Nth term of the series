@@ -1,0 +1,14 @@
+class Solution 
+{
+  public:
+    int findNthTerm(int N) 
+    {
+        // code here
+        int f=1,nxt=f;
+        for(int i=2;i<=N;i++)
+        {
+            nxt+=i;
+        }
+        return nxt;
+    }
+};
