@@ -1,0 +1,16 @@
+class Solution
+{
+	public:
+		long long int sum_of_square_evenNumbers(long long int n)
+		{
+		    // Code here
+		    long long res=0;
+		    int c=1;
+		    for(int i=2;c<=n;i=i+2)
+		    {
+		        c++;
+		        res+=pow(i,2);
+		    }
+		    return res;
+		}
+};
